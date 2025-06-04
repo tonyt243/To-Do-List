@@ -18,8 +18,9 @@ public class ToDoList {
             System.out.println("\nOptions:");
             System.out.println("1. Add a task");
             System.out.println("2. Remove a task");
-            System.out.println("3. Exit program");
-            System.out.print("Enter your option (1-3): ");
+            System.out.println("3. Mark task as completed");
+            System.out.println("4. Exit program");
+            System.out.println("Enter your option (1-4): ");
 
             String input = scanner.nextLine();
 
@@ -49,7 +50,7 @@ public class ToDoList {
                         private int getPriorityValue(String priority) {
                             switch (priority) {
                                 case "HIGH": return 3;
-                                case "MEDIUM": return 2;
+                                case "MED": return 2;
                                 case "LOW": return 1;
                                 default: return 0;
                             }
@@ -77,8 +78,33 @@ public class ToDoList {
                         System.out.println("Please enter a valid number.");
                     }
                     break;
-
                 case "3":
+                    if (tasks.isEmpty()) {
+                        System.out.println("No tasks to mark as completed.");
+                        break;
+                    }
+
+                    System.out.print("Enter task number to mark as completed: ");
+                    try {
+                        int index = Integer.parseInt(scanner.nextLine());
+                        if (index >= 1 && index <= tasks.size()) {
+                            Task task = tasks.get(index - 1);
+                            if (!task.isCompleted()) {
+                            task.markCompleted();
+                            System.out.println("Task marked as completed.");
+                        } else {
+                            System.out.println("Task is already completed.");
+                        }
+                    } else {
+                        System.out.println("Invalid task number.");
+                    }
+                } catch (NumberFormatException e) {
+                    System.out.println("Please enter a valid number.");
+                }
+                break;
+
+                            
+                case "4":
                     System.out.println("Goodbye!");
                     scanner.close();
                     return;
