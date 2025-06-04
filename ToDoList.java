@@ -14,13 +14,16 @@ public class ToDoList {
             for (int i = 0; i < tasks.size(); i++) {
                 System.out.println((i + 1) + ". " + tasks.get(i));
             }
-
-            System.out.println("\nOptions:");
+            
+            System.out.println("\nOptions Menu:");
+            System.out.println("==========================");
             System.out.println("1. Add a task");
             System.out.println("2. Remove a task");
             System.out.println("3. Mark task as completed");
             System.out.println("4. Exit program");
+            System.out.println("==========================");
             System.out.println("Enter your option (1-4): ");
+            
 
             String input = scanner.nextLine();
 
