@@ -18,3 +18,4 @@ Users can add tasks with priorities (Low, Medium, High), remove tasks, and view 
 
 ```bash
 javac Task.java ToDoList.java
+java ToDoList
