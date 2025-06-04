@@ -8,6 +8,7 @@ Users can add tasks with priorities (Low, Medium, High), remove tasks, and view 
 - Add tasks with a priority level: **HIGH**, **MEDIUM**, or **LOW**.
 - Tasks are automatically sorted so higher priority tasks appear first.
 - Remove tasks by their number.
+- Check tasks as completed
 - Simple console interface with menu options.
 - Uses two Java classes: `Task` and `ToDoList`.
 
