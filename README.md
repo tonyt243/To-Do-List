@@ -1,4 +1,4 @@
-# Java To-Do List with Priority #
+# Java To-Do List with Priority # (project in progress)
 
 A simple console-based To-Do List application written in Java.  
 Users can add tasks with priorities (Low, Medium, High), remove tasks, and view their to-do list sorted by priority.
