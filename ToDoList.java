@@ -36,12 +36,12 @@ public class ToDoList {
                     String regex = "\\d{2}/\\d{2}/\\d{4}";
 
                     while (true) {
-                       System.out.print("Enter the due date of task (dd/mm/yyyy): ");
+                       System.out.print("Enter the due date of task (mm/dd/yyyy): ");
                        date = scanner.nextLine();
                        if (date.matches(regex)) {
                            break; 
             } else {
-                System.out.println("Invalid format! Please enter date as dd/mm/yyyy.");
+                System.out.println("Invalid format! Please enter date as mm/dd/yyyy.");
             }
         }
 

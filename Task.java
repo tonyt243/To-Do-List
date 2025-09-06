@@ -22,6 +22,6 @@ public class Task {
     @Override
     public String toString() {
         String status = completed ? "[x]" : "[ ]";
-        return status + " " + description + " (" + priority + ")";
+        return status + " " + description + " (" + priority + ")" + " Due date: "+ date;
     }
 }
