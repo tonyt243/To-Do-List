@@ -32,6 +32,19 @@ public class ToDoList {
                     System.out.print("Enter task description: ");
                     String description = scanner.nextLine();
 
+                    String date;
+                    String regex = "\\d{2}/\\d{2}/\\d{4}";
+
+                    while (true) {
+                       System.out.print("Enter the due date of task (dd/mm/yyyy): ");
+                       date = scanner.nextLine();
+                       if (date.matches(regex)) {
+                           break; 
+            } else {
+                System.out.println("Invalid format! Please enter date as dd/mm/yyyy.");
+            }
+        }
+
                     String priority;
                     while (true) {
                         System.out.print("Enter priority (LOW, MED, HIGH): ");
@@ -42,7 +55,7 @@ public class ToDoList {
                         System.out.println("Invalid priority. Please type 'LOW', 'MED', or 'HIGH'.");
                     }
 
-                    tasks.add(new Task(description, priority));
+                    tasks.add(new Task(description, priority,date));
 
                     // Sort based on priority: HIGH > MEDIUM > LOW
                     tasks.sort(new Comparator<Task>() {

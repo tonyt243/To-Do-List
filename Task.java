@@ -1,11 +1,13 @@
 public class Task {
     String description;
     String priority;
+    String date;
     boolean completed;
 
-    public Task(String description, String priority) {
+    public Task(String description, String priority, String date) {
         this.description = description;
         this.priority = priority.toUpperCase();
+        this.date = date;
         this.completed = false;
     }
 
