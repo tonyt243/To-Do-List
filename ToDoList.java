@@ -8,14 +8,22 @@ public class ToDoList {
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
-            System.out.println("\n--- To-Do List ---");
+            System.out.println("\n--- Your To-Do List ---");
             if (tasks.isEmpty()) {
-                System.out.println("No tasks yet.");
+              System.out.println("No tasks yet.");
             } else {
-                for (int i = 0; i < tasks.size(); i++) {
-                    System.out.println((i + 1) + ". " + tasks.get(i));
-                }
-            }
+              System.out.printf("%-4s %-20s %-12s %-8s %-12s%n", "#", 
+              "Description", "Due Date", "Priority", "Status");
+              System.out.println("---------------------------------------------------------------");
+
+        for (int i = 0; i < tasks.size(); i++) {
+        Task task = tasks.get(i);
+        String status = task.isCompleted() ? "[X]" : "[ ]";
+        System.out.printf("%-4d %-20s %-12s %-8s %-12s%n",
+                i + 1, task.description, task.date, task.priority, status);
+    }
+}
+
 
             System.out.println("\nOptions Menu:");
             System.out.println("==========================");
