@@ -49,7 +49,7 @@ public class ToDoList {
                         if (InputValidator.isValidDate(date)) {
                             break;
                         } else {
-                        System.out.println("Invalid date! Please enter a valid date in mm/dd/yyyy format.");
+                        System.out.println("\nERROR: Invalid date! Please enter a valid date in mm/dd/yyyy format.\n");
                         }
                     }
 
@@ -60,7 +60,7 @@ public class ToDoList {
                         if (priority.equals("LOW") || priority.equals("MED") || priority.equals("HIGH")) {
                             break;
                         }
-                        System.out.println("Invalid priority. Please type 'LOW', 'MED', or 'HIGH'.");
+                        System.out.println("\nERROR: Invalid priority. Please type 'LOW', 'MED', or 'HIGH'.\n");
                     }
 
                     tasks.add(new Task(description, priority, date));
@@ -86,7 +86,7 @@ public class ToDoList {
                 case "2":
                     // Remove task
                     if (tasks.isEmpty()) {
-                        System.out.println("No tasks to remove.");
+                        System.out.println("\nERROR: No tasks to remove.\n");
                         break;
                     }
 
@@ -103,7 +103,7 @@ public class ToDoList {
                                 System.out.println("Task removed.");
                                 break;
                             } else {
-                                System.out.println("Invalid task number. Try again.");
+                                System.out.println("\nERROR: Invalid task number. Try again.\n");
                             }
                         } catch (NumberFormatException e) {
                             System.out.println("Please enter a valid number.");
@@ -114,7 +114,7 @@ public class ToDoList {
                 case "3":
                     // Mark task as completed
                     if (tasks.isEmpty()) {
-                        System.out.println("No tasks to mark as completed.");
+                        System.out.println("\nERROR: No tasks to mark as completed.\n");
                         break;
                     }
 
@@ -136,7 +136,7 @@ public class ToDoList {
                                 }
                                 break;
                             } else {
-                                System.out.println("Invalid task number. Try again.");
+                                System.out.println("\nERROR: Invalid task number. Try again.\n");
                             }
                         } catch (NumberFormatException e) {
                             System.out.println("Please enter a valid number.");
@@ -150,7 +150,7 @@ public class ToDoList {
                     return;
 
                 default:
-                    System.out.println("Invalid choice. Please try again.");
+                    System.out.println("\nERROR: Invalid choice. Please try again.\n");
             }
         }
     }
